@@ -1,24 +1,30 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import AboutPage from './components/about-Page/about';
+import ServicesPage from './components/service-page/service';
+import ContactPage from './components/contect-page/contect';
+import HeaderMain from './components/header/Header-main';
+import MainBody from './components/main-body/main';
+import Footer from './components/footer/Footer';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <HeaderMain /> {/* Display the header component */}
+      <div>
+        <Routes>
+          {/* Define the routes for each page */}
+          <Route path="/home" element={<MainBody />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/services" element={<ServicesPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          {/* You can add a default route here as well */}
+          <Route path="/" element={<HeaderMain />} />
+        </Routes>
+      </div>
+      <Footer/>
+    </Router>
   );
 }
 
