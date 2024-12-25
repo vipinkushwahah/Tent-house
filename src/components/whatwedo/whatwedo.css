@@ -1,0 +1,138 @@
+.heading-work{
+    font-size: 35px;
+    /* letter-spacing: 4px; */
+    letter-spacing: 2px;
+    position: relative;
+    font-family: x;
+    text-align: center;
+}
+.heading-work::before{
+    content: '';
+    /* background: #da9d40; */
+    background: #8000009c;
+    height: 3px;
+    width: 10%;
+    bottom: -15%;
+    left: 45%;
+    position: absolute;
+}
+.service__card {
+    background-color: #f9f9f9;
+    padding: 8px;
+    width: 380px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+  }
+  .services__list {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  .service__card:hover {
+    transform: scale(1.05);
+  }
+  
+  .service__image {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .service__name {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .service__description {
+    font-size: 1rem;
+    color: #666;
+  }
+  @media (max-width: 768px) {
+    .services__list {
+      flex-direction: column;
+      align-items: center;
+      margin: 20px 5px 0px 5px !important;
+    }
+  }
+
+  .dot-list {
+    list-style-type: none; /* Removes the default list styling */
+    padding: 0; /* Removes padding */
+    margin: 0; /* Removes margin */
+}
+
+.dot-list-item {
+    position: relative;
+    padding-left: 20px; /* Adjust to provide space for the dot */
+    margin-bottom: 8px; /* Spacing between items */
+    font-size: 16px; /* Font size for the text */
+    /* width: 31%; */
+    /* float: left; */
+    font-size: 18px;
+    margin-left: 23px;
+    color: black;
+    font-weight: bold;
+}
+
+.dot-list-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px; /* Diameter of the dot */
+    height: 10px; /* Diameter of the dot */
+    background-color: black; /* Dot color */
+    border-radius: 50%; /* Makes it a circle */
+}
+.whtvdo_txt_1{
+    margin: 20px 0px 10px;
+    font-family: sans-serif;
+    background: #80808066;
+    padding: 5px 5px;
+    border-left: 4px solid #5d5b5b;
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.2;
+    color: inherit;
+    text-align: center;
+}
+.container-section {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: 100px;
+    margin-left: 100px;
+}
+
+.text_subhaeding{
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 1;
+    font-family: bold;
+    color: maroon;
+}
+
+.doList{
+    /* background-color: #ffff; */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 480px) {
+    .container-section{
+        margin: unset !important;
+        padding: unset !important;
+    }
+    .text_subhaeding{
+        margin: 0px 5px 0px 5px !important;
+        text-align: center;
+    }
+    .tabale-head{
+        margin: 20px 5px 20px 5px !important;
+    }
+}

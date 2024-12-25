@@ -1,7 +1,8 @@
 /* Services Page Styles */
 .services-page {
-    padding: 20px;
-    background-color: #fff;
+   
+    margin: 0px 100px 0px 100px;
+    /* background-color: #fff; */
   }
   
   .services__section {
@@ -12,15 +13,28 @@
     font-size: 2.5rem;
     margin-bottom: 40px;
     text-transform: uppercase;
-    color: #333;
+    /* color: #00ff00; */
   }
   
   .services__list {
     display: flex;
     justify-content: space-around;
     gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
   }
   
+  .services__titleimage{
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    height: 600px;
+  }
+  .services__titletext{
+    flex-wrap: wrap;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
   .service__card {
     background-color: #f9f9f9;
     padding: 20px;
@@ -59,4 +73,44 @@
       align-items: center;
     }
   }
-  
+
+  .tabale-head{
+    border: 1px solid #dee2e6;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  table td {
+    padding: 5px 10px;
+    font-size: 20px;
+}
+.tabale-head th, .tabale-head td {
+    border: 1px solid #dee2e6;
+}
+.table th, .table td {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+  .table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+}
+table {
+  border-collapse: collapse;
+}
+@media (max-width: 480px) {
+  .services-page{
+      margin: unset !important;
+      padding: unset !important;
+  }
+  .tabale-head{
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+  }
+  .services__titletext{
+    margin: 0px 5px 10px 5px !important;
+  }
+}
