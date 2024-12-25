@@ -7,6 +7,8 @@ import ContactPage from './components/contect-page/contect';
 import HeaderMain from './components/header/Header-main';
 import MainBody from './components/main-body/main';
 import Footer from './components/footer/Footer';
+import ImageGallery from './components/gellery/gellery';
+import WhatWeDo from './components/whatwedo/whatwedo';
 
 function App() {
   return (
@@ -15,12 +17,14 @@ function App() {
       <div>
         <Routes>
           {/* Define the routes for each page */}
-          <Route path="/home" element={<MainBody />} />
+          <Route path="/" element={<MainBody />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/services" element={<ServicesPage />} />
+          <Route path="/whatwedo" element={<WhatWeDo />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/gellery" element={<ImageGallery />} />
           {/* You can add a default route here as well */}
-          <Route path="/" element={<HeaderMain />} />
+          {/* <Route path="/" element={<HeaderMain />} /> */}
         </Routes>
       </div>
       <Footer/>

@@ -6,35 +6,40 @@ const Footer = () => {
         <footer className="footer">
             <div className="footer__container">
                 <div className="footer__about">
-                    <h2 className="footer__title">About Us</h2>
-                    <p className="footer__text">
-                        Building dreams with quality and precision. Our team ensures the highest standards of construction services for our valued clients.
+                    <h2 className="footer__title"><span className='underline'>Locate</span> Us</h2>
+                    <p><span className="footer__title">Address:- </span> 
+                    Maa Maa_Bhawani_Tent_House, bhagalpur road, Nawalpur chauraha,
+                    Salempur, Deoria, Uttar Pradesh (274509)
                     </p>
-                </div>
-                <div className="footer__nav">
-                    <h2 className="footer__title">Quick Links</h2>
-                    <ul className="footer__menu">
-                        <li className="footer__menu-item"><a href="#projects">Projects</a></li>
-                        <li className="footer__menu-item"><a href="#services">Services</a></li>
-                        <li className="footer__menu-item"><a href="#team">Our Team</a></li>
-                        <li className="footer__menu-item"><a href="#contact">Contact</a></li>
-                    </ul>
                 </div>
                 <div className="footer__contact">
-                    <h2 className="footer__title">Contact Us</h2>
+                    <h2 className="footer__title"><span className='underline'>Contact</span> Us</h2>
                     <p className="footer__text">
-                        <strong>Email:</strong> info@construction.com<br />
-                        <strong>Phone:</strong> +123-456-7890
+                        <strong>Email:</strong> maabhawanitenthouse5@gmail.com<br />
+                        <strong>Phone:</strong> +778-392-5991
                     </p>
-                    <div className="footer__social">
-                        <a href="https://facebook.com" className="footer__social-icon" aria-label="Facebook">🔗</a>
-                        <a href="https://instagram.com" className="footer__social-icon" aria-label="Instagram">🔗</a>
-                        <a href="https://linkedin.com" className="footer__social-icon" aria-label="LinkedIn">🔗</a>
-                    </div>
+                </div>
+                <div>
+                <h2 className="footer__title"><span className='underline'>Follow</span> us</h2>
+                <div className="social-links">
+                <a href="https://www.instagram.com/vipinkushwaha39/" target="blank">
+                  <div className="social-link"><i className="ri-instagram-line"></i></div>
+                </a>
+                <a href="https://in.linkedin.com/in/vipinkushwahah" target="blank">
+                  <div className="social-link"><i className="ri-linkedin-fill"></i></div>
+                </a>
+                <a href="https://github.com/vipinkushwahah/" target="blank">
+                  <div className="social-link"><i className="ri-github-fill"></i></div>
+                </a>
+                <div className="social-link">
+                  <i className="ri-whatsapp-fill"></i>
+                  <span className="tooltip">7420-8683-46</span>
+                </div>
+              </div>
                 </div>
             </div>
             <div className="footer__copyright">
-                © 2024 My Construction Company. All rights reserved.
+                © 2024 My Tent_House Company. All rights reserved.
             </div>
         </footer>
     );
