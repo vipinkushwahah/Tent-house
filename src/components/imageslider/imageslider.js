@@ -54,7 +54,7 @@ export default function ImageSlider() {
           </div>
           <div className="container__wreaper-main-heading">
             <div className="intro-title">
-              Maa_Bhawani <span className="highlight-text">Tent_House</span>
+              Maa_Bhawani-viipin <span className="highlight-text">Tent_House</span>
             </div>
             <div className="intro-greeting">Hello, I'm</div>
             <div className="intro-name">Sanny Chaurasiya</div>
