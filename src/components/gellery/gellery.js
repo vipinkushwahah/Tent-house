@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from 'react';
 import "./ImageGallery.css";
+import QRCodeComponent from "../qr/qr";
 
 const images = [
   "https://via.placeholder.com/600x400?text=Image+1",
@@ -119,6 +120,9 @@ const ImageGallery = () => {
           ))}
         </tbody>
       </table>
+      <div>
+        <QRCodeComponent/>
+      </div>
     </div>
   );
 };
