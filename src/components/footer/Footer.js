@@ -7,8 +7,8 @@ const Footer = () => {
             <div className="footer__container">
                 <div className="footer__about">
                     <h2 className="footer__title"><span className='underline'>Locate</span> Us</h2>
-                    <p><span className="footer__title">Address:- </span> 
-                    Maa Maa_Bhawani_Tent_House, bhagalpur road, Nawalpur chauraha,
+                    <p className="footer__text"><strong>Address:- </strong> 
+                    Maa_Bhawani_Tent_House, bhagalpur road, Nawalpur chauraha,
                     Salempur, Deoria, Uttar Pradesh (274509)
                     </p>
                 </div>

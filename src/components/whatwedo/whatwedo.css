@@ -3,7 +3,7 @@
     /* letter-spacing: 4px; */
     letter-spacing: 2px;
     position: relative;
-    font-family: x;
+    /* font-family: x; */
     text-align: center;
 }
 .heading-work::before{
@@ -19,7 +19,7 @@
 .service__card {
     background-color: #f9f9f9;
     padding: 8px;
-    width: 380px;
+    width: 322px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -69,7 +69,7 @@
 .dot-list-item {
     position: relative;
     padding-left: 20px; /* Adjust to provide space for the dot */
-    margin-bottom: 8px; /* Spacing between items */
+    margin-top: 12px; /* Spacing between items */
     font-size: 16px; /* Font size for the text */
     /* width: 31%; */
     /* float: left; */
@@ -91,8 +91,8 @@
     border-radius: 50%; /* Makes it a circle */
 }
 .whtvdo_txt_1{
-    margin: 20px 0px 10px;
-    font-family: sans-serif;
+  margin: 20px 10px 10px 10px;
+    /* font-family: sans-serif; */
     background: #80808066;
     padding: 5px 5px;
     border-left: 4px solid #5d5b5b;
@@ -103,10 +103,11 @@
     text-align: center;
 }
 .container-section {
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: 100px;
-    margin-left: 100px;
+    /* padding-right: 15px;
+    padding-left: 15px; */
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-top: 10px;
 }
 
 .text_subhaeding{

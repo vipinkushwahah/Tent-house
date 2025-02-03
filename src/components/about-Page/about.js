@@ -1,10 +1,18 @@
 // AboutPage.js
 import React from "react";
 import './about.css';
+import tentthree from '../assates/tenttree.jpg'
 
 const AboutPage = () => {
   return (
     <div className="about-page">
+      <div>
+        <img
+          className="main_image"
+          src={tentthree}
+          alt="main"
+        />
+      </div>
       <section className="about__section">
         <div className="about__title">WHO WE ARE</div>
         <div className="about__description">

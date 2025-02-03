@@ -1,7 +1,7 @@
 /* Services Page Styles */
 .services-page {
    
-    margin: 0px 100px 0px 100px;
+    margin: 10px 20px 0px 20px;
     /* background-color: #fff; */
   }
   
@@ -16,6 +16,17 @@
     /* color: #00ff00; */
   }
   
+  .services__title::before {
+    content: '';
+    /* background: #da9d40; */
+    background: #8000009c;
+    height: 3px;
+    width: 10%;
+    bottom: 15%;
+    left: 45%;
+    position: absolute;
+  }
+
   .services__list {
     display: flex;
     justify-content: space-around;
@@ -113,4 +124,18 @@ table {
   .services__titletext{
     margin: 0px 5px 10px 5px !important;
   }
+  table td {
+    font-size: 14px !important;
+  }
+  .services__title::before {
+    content: '';
+    /* background: #da9d40; */
+    background: #8000009c;
+    height: 3px;
+    width: 20%;
+    bottom: 21%;
+    left: 45%;
+    position: absolute;
+  }
+
 }

@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import React from "react";
 import './service.css';
+import tentthree from '../assates/tenttree.jpg'
 
 const images = [
   'https://3.imimg.com/data3/HJ/EP/MY-13823372/wp-content-themes-tenthouse-and-catering-images-tent_house.jpg',
@@ -63,6 +64,13 @@ const ServicesPage = () => {
 
   return (
     <div className="services-page">
+      <div>
+        <img
+          className="main_image"
+          src={tentthree}
+          alt="main"
+        />
+      </div>
       <section className="services__section">
         <h1 className="services__title">Our Services</h1>
         <div className="services__titletext">

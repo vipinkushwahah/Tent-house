@@ -2,14 +2,16 @@ import React from "react";
 import { useState, useEffect } from 'react';
 import "./ImageGallery.css";
 import QRCodeComponent from "../qr/qr";
+import tentthree from '../assates/tenttree.jpg'
+import useScrollFadeIn from "../hook";
 
 const images = [
-  "https://via.placeholder.com/600x400?text=Image+1",
-  "https://via.placeholder.com/600x400?text=Image+2",
-  "https://via.placeholder.com/600x400?text=Image+3",
-  "https://via.placeholder.com/600x400?text=Image+4",
-  "https://via.placeholder.com/600x400?text=Image+5",
-  "https://via.placeholder.com/600x400?text=Image+6",
+  tentthree,
+  tentthree,
+  tentthree,
+  tentthree,
+  tentthree,
+  tentthree,
 ];
 
 const videos = [
@@ -21,7 +23,8 @@ const videos = [
 const ImageGallery = () => {
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
-
+  useScrollFadeIn(); // Apply fade-in effect on scroll
+  
   // Handle slide change (next video)
   const nextSlide = () => {
     setCurrentVideoIndex((prevIndex) => (prevIndex + 1) % videos.length);
@@ -68,6 +71,13 @@ const ImageGallery = () => {
 
   return (
     <div className="paddimg">
+      <div>
+        <img
+          className="main_image"
+          src={tentthree}
+          alt="main"
+        />
+      </div>
       <div className="App">
         Image Gallery
       </div>
@@ -107,7 +117,7 @@ const ImageGallery = () => {
         ))}
       </div>
       <div className='text_subhaeding'>
-      We provide tent house services for the following products in and around Bangalore and across Karnataka.
+        We provide tent house services for the following products in and around Bangalore and across Karnataka.
       </div>
       <table className='tabale-head'>
         <tbody>
@@ -121,7 +131,7 @@ const ImageGallery = () => {
         </tbody>
       </table>
       <div>
-        <QRCodeComponent/>
+        <QRCodeComponent />
       </div>
     </div>
   );

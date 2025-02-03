@@ -1,15 +1,17 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 import React from "react";
 import 'remixicon/fonts/remixicon.css';
 import './imageslider.css';
 import logo from '../assates/logo.jpeg'
+import ImageGallery from "../gellery/gellery";
+import tentthree from '../assates/tenttree.jpg'
+import tentfour from '../assates/tentfour.jpg'
+import tentfive from '../assates/tentfive.jpg'
+import tentsix from '../assates/079b41a3-b562-4576-a780-ed8033d0e320.jpg'
+import tenttwo from '../assates/tenttwo.jpg'
+import tentone from '../assates/tentone.jpg'
 
-const images = [
-  'https://3.imimg.com/data3/HJ/EP/MY-13823372/wp-content-themes-tenthouse-and-catering-images-tent_house.jpg',
-  'https://static.wixstatic.com/media/00daf2_f895706199f5400e8f8c69ae0616257a~mv2.jpg/v1/fill/w_640,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/00daf2_f895706199f5400e8f8c69ae0616257a~mv2.jpg',
-  'https://content.jdmagicbox.com/v2/comp/hyderabad/q5/040pxx40.xx40.110727085053.b7q5/catalogue/shaik-tabrez-tent-house-and-catering-services-malakpet-hyderabad-tent-house-tc5fap2btc.jpg',
-  'https://cdn0.weddingwire.in/vendor/7717/3_2/960/jpg/tent-house-kk-tenthouse-wedding-decor-3_15_357717-160759264410234.jpeg',
-];
+const images = [tentthree, tentfour, tentfive, tentsix, tenttwo, tentone];
 
 export default function ImageSlider() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -27,6 +29,37 @@ export default function ImageSlider() {
 
   return (
     <div>
+      <div>
+        <div className="slider-container">
+          {images.map((src, index) => (
+            <div
+              key={index}
+              className={`slide ${index === currentIndex ? 'active' : ''}`}
+              style={{
+                transform: `translateX(${(index - currentIndex) * 100}%)`,
+              }}
+            >
+              <div className={`slide-content ${isZoomed ? 'zoomed' : ''}`}>
+                <img
+                  src={src}
+                  alt={`Slide ${index + 1}`}
+                  className="slider-image"
+                />
+              </div>
+            </div>
+          ))}
+          <div className="navigation">
+            {images.map((_, index) => (
+              <button
+                key={index}
+                className={`nav-dot ${index === currentIndex ? 'active' : ''}`}
+                onClick={() => setCurrentIndex(index)}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
       <div>
         <div className="container__wreaper">
           <div className="circle-container">
@@ -54,10 +87,10 @@ export default function ImageSlider() {
           </div>
           <div className="container__wreaper-main-heading">
             <div className="intro-title">
-              Maa_Bhawani <span className="highlight-text">Tent_House</span>
+              Maa Bhawani <span className="highlight-text">Tent House</span>
             </div>
-            <div className="intro-greeting">Hello, I'm</div>
-            <div className="intro-name">Sanny Chaurasiya</div>
+            {/* <div className="intro-greeting">Hello, I'm</div>
+            <div className="intro-name">Sanny Chaurasiya</div> */}
             <div className="intro-description">
               Welcome to Maa Bhawani Tent House, where we turn your special occasions into cherished memories.
               With a commitment to excellence and attention to detail, we provide exceptional tenting solutions
@@ -73,7 +106,7 @@ export default function ImageSlider() {
                             </button>
                         </a>    
                         </div> */}
-              <div className="social-links">
+              {/* <div className="social-links">
                 <a href="https://www.instagram.com/vipinkushwaha39/" target="blank">
                   <div className="social-link"><i className="ri-instagram-line"></i></div>
                 </a>
@@ -87,42 +120,15 @@ export default function ImageSlider() {
                   <i className="ri-whatsapp-fill"></i>
                   <span className="tooltip">7420-8683-46</span>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
 
         </div>
 
       </div>
-      <div className="slider-container">
-        {images.map((src, index) => (
-          <div
-            key={index}
-            className={`slide ${index === currentIndex ? 'active' : ''}`}
-            style={{
-              transform: `translateX(${(index - currentIndex) * 100}%)`,
-            }}
-          >
-            <div className={`slide-content ${isZoomed ? 'zoomed' : ''}`}>
-              <img
-                src={src}
-                alt={`Slide ${index + 1}`}
-                className="slider-image"
-              />
-            </div>
-          </div>
-        ))}
-        <div className="navigation">
-          {images.map((_, index) => (
-            <button
-              key={index}
-              className={`nav-dot ${index === currentIndex ? 'active' : ''}`}
-              onClick={() => setCurrentIndex(index)}
-              aria-label={`Go to slide ${index + 1}`}
-            />
-          ))}
-        </div>
-      </div>
+
+
       <div className='headinghome-page'>
         What We Do
       </div>
@@ -134,7 +140,7 @@ export default function ImageSlider() {
         exhibitions, events, conventions, and convention centers in and around Bangalore, Karnataka.
       </div>
       <div className='headinghome-page-subtext'>
-        Tent House Supplier services provided by Shridhar Tent House in Bangalore.
+        Tent House Supplier services provided by Maa Bhawani Tent House in Salempur.
       </div>
       <div className="about__spacers">
         <div className="about__spacer">
@@ -219,7 +225,7 @@ export default function ImageSlider() {
             <span>1</span>
           </div>
           <div class="stats__description">
-            Exhibitions 
+            Exhibitions
             Completed
           </div>
         </div>
@@ -231,7 +237,7 @@ export default function ImageSlider() {
             <span>26</span>
           </div>
           <div class="stats__description">
-            Marriage 
+            Marriage
             Arranged
           </div>
         </div>
@@ -243,7 +249,7 @@ export default function ImageSlider() {
             <span>4</span>
           </div>
           <div class="stats__description">
-            Events 
+            Events
             Completed
           </div>
         </div>
@@ -255,10 +261,36 @@ export default function ImageSlider() {
             <span>4</span>
           </div>
           <div class="stats__description">
-            Happy 
+            Happy
             Customers
           </div>
         </div>
+      </div>
+      <div>
+        <div className='headinghome-page'>
+          How We Work
+        </div>
+        <div className="event-container">
+          <div>
+            <img src={tentthree} alt="event" className="event-image" />
+            <div className="event-name">Event</div>
+          </div>
+          <div >
+            <img src={tentthree} alt="exhibition" className="event-image" />
+            <div className="event-name">Exhibition</div>
+          </div>
+          <div >
+            <img src={tentthree} alt="convention" className="event-image" />
+            <div className="event-name">Convention Center</div>
+          </div>
+          <div >
+            <img src={tentthree} alt="wedding" className="event-image" />
+            <div className="event-name">wedding</div>
+          </div>
+        </div>
+      </div>
+      <div className="imagegellery">
+        <ImageGallery />
       </div>
     </div>
   );

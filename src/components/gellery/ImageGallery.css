@@ -1,6 +1,6 @@
 /* Container styling */
 body {
-  font-family: 'Arial', sans-serif;
+  /* font-family: 'Arial', sans-serif; */
   /* background-color: #f4f4f4; */
 }
 
@@ -72,7 +72,7 @@ body {
     /* letter-spacing: 4px; */
     letter-spacing: 2px;
     position: relative;
-    font-family: x;
+    /* font-family: x; */
     text-align: center !important;
     margin-bottom: 3rem !important;
     font-weight: 500;
@@ -157,5 +157,49 @@ body {
 } 
 
 .paddimg{
-  margin: 0px 100px 0px 100px;
+  margin: 10px 20px 0px 20px;
 }
+
+/* transition for images */
+.gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+  width: 340px;
+}
+
+.gallery-item.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.gallery-image {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+}
+
+.gallery-overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+

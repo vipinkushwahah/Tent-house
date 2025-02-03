@@ -12,7 +12,7 @@ body {
   gap: 30px;
   margin: 0 auto;
   padding: 20px;
-  font-family: Arial, sans-serif;
+  /* font-family: Arial, sans-serif; */
   flex-wrap: wrap;
   overflow-y: scroll;
   margin-top: 20px;
@@ -126,6 +126,7 @@ body {
   .form-input,
   .form-textarea {
       font-size: 0.9rem;
+      width: 282px;
   }
 }
 
@@ -139,7 +140,7 @@ body {
       margin-left: 15px;
   }
   .about__coverage{
-    margin: 20px 5px 20px 5px;
+    margin: 20px 16px 20px 16px;
   }
   .about__title{
     margin-bottom: 2rem !important;
@@ -147,8 +148,7 @@ body {
   .about__description,
   .about__services,
   .about__quality{
-    margin: 20px 5px 0px 5px !important;
-    text-align: center;
+    margin: 20px 16px 0px 16px !important;
   }
   .contact-title-paragraph,
   .contact-title {
@@ -156,7 +156,7 @@ body {
       padding: 10px 0px 0px 10px;
   }
   .contact-form {
-      width: 410px !important;
+      width: 335px !important;
       padding: unset !important;
   }
   .contact-container {

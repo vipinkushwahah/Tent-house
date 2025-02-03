@@ -1,4 +1,5 @@
 import './whatwedo.css'
+import tentthree from '../assates/tenttree.jpg'
 
 const WhatWeDo = () => {
     const services = [
@@ -53,6 +54,13 @@ const WhatWeDo = () => {
     ];
     return (
         <div className='container-section'>
+            <div>
+                <img
+                    className="main_image"
+                    src={tentthree}
+                    alt="main"
+                />
+            </div>
             <div>
                 <div className="heading-work">WHAT WE DO</div>
                 <div>
