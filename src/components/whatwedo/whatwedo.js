@@ -1,43 +1,49 @@
 import './whatwedo.css'
 import tentthree from '../assates/tenttree.jpg'
+import tentone from '../assates/tenthouseone.jpg'
+import tentow from '../assates/tenthousefive.jpg'
+import tenthree from '../assates/tenthousefour.jpg'
+import tenfour from '../assates/tenthouseseven.jpg'
+import tenfive from '../assates/tenthousesix.jpg'
+import tensix from '../assates/tenthousetree.jpg'
 
 const WhatWeDo = () => {
     const services = [
         {
             id: 1,
             name: "Event",
-            description: "We specialize in residential projects, including custom homes and renovations.",
-            image: "https://www.sanaglobalprojects.com/wp-content/uploads/2022/01/gettyimages-812099500-612x612-1-1200x720.webp"
+            description: "We specialize in Event.",
+            image: tentone
         },
         {
             id: 2,
             name: "Exhibitions",
-            description: "Our team handles commercial construction projects with a focus on efficiency and quality.",
-            image: "https://5.imimg.com/data5/HM/LW/MY-32304676/building-design-500x500.jpg"
+            description: "Our team handles Exhibitions projects with a focus on efficiency and quality.",
+            image: tentow
         },
         {
             id: 3,
             name: "Maa Bhawani Convention Center",
-            description: "Our team handles commercial construction projects with a focus on efficiency and quality.",
-            image: "https://5.imimg.com/data5/HM/LW/MY-32304676/building-design-500x500.jpg"
+            description: "Our team handles Convention Center projects with a focus on efficiency and quality.",
+            image: tenthree
         },
         {
             id: 4,
             name: "Conferences",
-            description: "Our team handles commercial construction projects with a focus on efficiency and quality.",
-            image: "https://5.imimg.com/data5/HM/LW/MY-32304676/building-design-500x500.jpg"
+            description: "Our team handles Conferences projects with a focus on efficiency and quality.",
+            image: tenfour
         },
         {
             id: 5,
             name: "Weddings",
-            description: "Our team handles commercial construction projects with a focus on efficiency and quality.",
-            image: "https://5.imimg.com/data5/HM/LW/MY-32304676/building-design-500x500.jpg"
+            description: "Our team handles Weddings projects with a focus on efficiency and quality.",
+            image: tensix
         },
         {
             id: 6,
             name: "Warehousing",
-            description: "Our team handles commercial construction projects with a focus on efficiency and quality.",
-            image: "https://5.imimg.com/data5/HM/LW/MY-32304676/building-design-500x500.jpg"
+            description: "Our team handles Warehousing projects with a focus on efficiency and quality.",
+            image: tenfive
         }
     ];
     const itemstwo = [
@@ -83,7 +89,7 @@ const WhatWeDo = () => {
                 </div>
             </div>
             <div className='whtvdo_txt_1'>
-                Contact Maa Bhawani Tent House for the following equipments on Hire / for rent in salempur.
+                Contact Maa Bhawani Tent House for the following equipments on Hire / for rent in salempur Uttar-Pradesh.
             </div>
             <div className='doList'>
                 <ul className="dot-list">
@@ -110,9 +116,9 @@ const WhatWeDo = () => {
             </div>
             <div>.</div>
             <div className='text_subhaeding'>
-                <b>Shridhar Tent House - </b>Aluminum Tents, German Tents, Canopies, Pandals, Shamianas, Exhibition Stalls,
+                <b>MAA BHAWANI Tent House - </b>Aluminum Tents, German Tents, Canopies, Pandals, Shamianas, Exhibition Stalls,
                 Super Structures, Mega Hangers,
-                AC Tents, Wooden Stages, Waterproof Sheds and more for Rent and on Hire in Bangalore, Karnataka.
+                AC Tents, Wooden Stages, Waterproof Sheds and more for Rent and on Hire in Salempur, Uttar-Pradesh.
             </div>
         </div>
     )

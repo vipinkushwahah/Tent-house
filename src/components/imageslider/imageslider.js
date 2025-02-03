@@ -7,7 +7,7 @@ import ImageGallery from "../gellery/gellery";
 import tentthree from '../assates/tenttree.jpg'
 import tentfour from '../assates/tentfour.jpg'
 import tentfive from '../assates/tentfive.jpg'
-import tentsix from '../assates/079b41a3-b562-4576-a780-ed8033d0e320.jpg'
+import tentsix from '../assates/tentfive.jpg'
 import tenttwo from '../assates/tenttwo.jpg'
 import tentone from '../assates/tentone.jpg'
 

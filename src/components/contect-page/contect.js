@@ -57,8 +57,8 @@ const Contact = () => {
                     <form onSubmit={handleSubmit} className="contact-form">
                         <div className="contact-title">Let's work together</div>
                         <div className="contact-title-paragraph">
-                            As a Software Engineer, I build efficient, scalable applications using technologies like JavaScript and React.
-                            I'm passionate about problem-solving and continuously improving software to meet user needs.
+                        "Maa Bhawani Tent House brings elegance and perfection to every celebration. From weddings to gatherings,
+                         we create stunning setups for your special moments. Contact us to make your event unforgettable!"
                         </div>
                         <div className="contact-title-paragraph-form">
                             <div className="form-group">
@@ -126,7 +126,7 @@ const Contact = () => {
                         </div>
                         <div class="contact-info-details">
                             <div class="contact-info-title">Phone</div>
-                            <div class="contact-info-value">(+91) 7420 8683 46</div>
+                            <div class="contact-info-value">(+91) 7783 9259 91</div>
                         </div>
                     </div>
 
@@ -136,7 +136,7 @@ const Contact = () => {
                         </div>
                         <div class="contact-info-details">
                             <div class="contact-info-title">Email</div>
-                            <div class="contact-info-value">vipinkuswahah@gmail.com</div>
+                            <div class="contact-info-value">maabhawanitenthouse5@gmail.com</div>
                         </div>
                     </div>
 
@@ -146,7 +146,7 @@ const Contact = () => {
                         </div>
                         <div class="contact-info-details">
                             <div class="contact-info-title">Address</div>
-                            <div class="contact-info-value">Lucknow Uttar Pradesh</div>
+                            <div class="contact-info-value">Salempur, Deoria, Uttar-Pradesh -274509</div>
                         </div>
                     </div>
                 </div>

@@ -254,7 +254,7 @@ body {
 
   .about__spacer {
     margin: 0px 0px 20px 0px !important;
-    padding: unset !important;
+    padding: 10px 64px 12px 10px;
   }
 
   .intro-name {
@@ -266,7 +266,7 @@ body {
   }
 
   .event-image {
-    height: 276px;
+    height: 300px !important;
     margin: 34px 34px 0px 34px;
   }
 
@@ -284,6 +284,15 @@ body {
 
   .intro-title {
     margin: -10px 0px 10px 0px !important;
+  }
+  
+  .headinghome-page::before {
+    width: 36% !important;
+    left: 32% !important;
+  }
+  .App::before {
+    width: 36% !important;
+    left: 32% !important;
   }
 }
 

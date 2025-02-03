@@ -185,6 +185,7 @@ body {
   width: 100%;
   display: block;
   border-radius: 8px;
+  height: 100%;
 }
 
 .gallery-overlay {
@@ -203,3 +204,9 @@ body {
   opacity: 1;
 }
 
+.place-of-event{
+  margin-top: 10px;
+    color: black;
+    font-weight: 900;
+    font-size: 25px;
+}

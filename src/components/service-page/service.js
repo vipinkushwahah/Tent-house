@@ -6,8 +6,8 @@ import tentthree from '../assates/tenttree.jpg'
 
 const images = [
   'https://3.imimg.com/data3/HJ/EP/MY-13823372/wp-content-themes-tenthouse-and-catering-images-tent_house.jpg',
-  'https://static.wixstatic.com/media/00daf2_f895706199f5400e8f8c69ae0616257a~mv2.jpg/v1/fill/w_640,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/00daf2_f895706199f5400e8f8c69ae0616257a~mv2.jpg',
-  'https://content.jdmagicbox.com/v2/comp/hyderabad/q5/040pxx40.xx40.110727085053.b7q5/catalogue/shaik-tabrez-tent-house-and-catering-services-malakpet-hyderabad-tent-house-tc5fap2btc.jpg',
+  tentthree,
+  tentthree,
   'https://cdn0.weddingwire.in/vendor/7717/3_2/960/jpg/tent-house-kk-tenthouse-wedding-decor-3_15_357717-160759264410234.jpeg',
 ];
 
@@ -27,15 +27,39 @@ const ServicesPage = () => {
   const services = [
     {
       id: 1,
-      name: "Residential Construction",
-      description: "We specialize in residential projects, including custom homes and renovations.",
-      image: "https://www.sanaglobalprojects.com/wp-content/uploads/2022/01/gettyimages-812099500-612x612-1-1200x720.webp"
+      name: "Kathas",
+      description: "We Specialize In Spiritual Getherings and Katha Events.",
+      image: tentthree
     },
     {
       id: 2,
-      name: "Commercial Construction",
-      description: "Our team handles commercial construction projects with a focus on efficiency and quality.",
-      image: "https://5.imimg.com/data5/HM/LW/MY-32304676/building-design-500x500.jpg"
+      name: "Election Rally",
+      description: "Our team handles Election Rally projects with a focus on efficiency and quality.",
+      image: tentthree
+    },
+    {
+      id: 3,
+      name: "Exhibitions",
+      description: "Our team handles Exhibitions projects with a focus on efficiency and quality.",
+      image: tentthree
+    },
+    {
+      id: 4,
+      name: "Conferences",
+      description: "Our team handles Conferences projects with a focus on efficiency and quality.",
+      image: tentthree
+    },
+    {
+      id: 5,
+      name: "Events",
+      description: "Our team handles Events projects with a focus on efficiency and quality.",
+      image: tentthree
+    },
+    {
+      id: 6,
+      name: "Convention Center",
+      description: "Our team handles Convention Center projects with a focus on efficiency and quality.",
+      image: tentthree
     }
   ];
   const data = [
@@ -74,11 +98,11 @@ const ServicesPage = () => {
       <section className="services__section">
         <h1 className="services__title">Our Services</h1>
         <div className="services__titletext">
-          Shridhar Tent House was started in 1984 by three partners and has been in the business for more than 36 years
-          in Bangalore. The company provides shamiyanas, German tents, aluminium hanger tents, pagoda tents, AC tents,
-          canopies, wooden stages, super structures, mega hangers, exhibition stalls, Octanorm stalls for rent in Bangalore for
-          weddings, conventions, functions, tradeshows, conventions in and around Bangalore, Karnataka.
-          Tent House Supplier services provided by Shridhar Tent House in Bangalore.
+          Maa Bhawani Tent House was started in 2012 and has been in the business for more than 10 years
+          in Uttar-Pradesh. The company provides shamiyanas, German tents, aluminium hanger tents, pagoda tents, AC tents,
+          canopies, wooden stages, super structures, mega hangers, exhibition stalls, Octanorm stalls for rent in Uttar-Pradesh for
+          weddings, conventions, functions, tradeshows, conventions in and around Uttar-Pradesh.
+          Tent House Supplier services provided by Shridhar Tent House in Uttar-Pradesh.
           We provide the following Tent House supplier services for Functions, Exhibitions, Tradeshows, Conferences,
           Events, Conventions, Convention Centers, Weddings, Engagement Functions, Felicitation Functions, Political Functions, Industrial Events, Corporate Functions, and more.
         </div>
@@ -112,7 +136,7 @@ const ServicesPage = () => {
           </div>
         </div>
         <div className="services__list">
-          {Array.from({ length: 8 }).map((_, index) => (
+          {Array.from({ length: 6 }).map((_, index) => (
             <div className="service__card" key={index}>
               <img
                 src={services[index % services.length].image}
@@ -138,8 +162,8 @@ const ServicesPage = () => {
       </table>
       <div className='text_subhaeding'>
         Contact us for all your Tent House supplier services requirements.
-        We have more than 75+ products that we can supply through tent house services
-        for rent / for hire in Bangalore and across Karnataka and India.
+        We have more than 50+ products that we can supply through tent house services
+        for rent / for hire in Uttar-Pradesh and India.
       </div>
     </div>
   );

@@ -3,21 +3,26 @@ import { useState, useEffect } from 'react';
 import "./ImageGallery.css";
 import QRCodeComponent from "../qr/qr";
 import tentthree from '../assates/tenttree.jpg'
+import ten from '../assates/tentfour.jpg'
+import tens from '../assates/tenthouseegth.mp4'
+import tenn from '../assates/tenthousefour.jpg'
+import tennn from '../assates/tenthousesix.jpg'
+import tennnn from '../assates/tenthousetwo.jpg'
 import useScrollFadeIn from "../hook";
 
 const images = [
+  tenn,
   tentthree,
+  ten,
+  tennn,
   tentthree,
-  tentthree,
-  tentthree,
-  tentthree,
-  tentthree,
+  tennnn,
 ];
 
 const videos = [
-  'https://www.w3schools.com/html/movie.mp4', // Replace with your video URLs
-  'https://www.w3schools.com/html/movie.ogg',
-  'https://www.w3schools.com/html/movie.mp4',
+  tens, // Replace with your video URLs
+  tens,
+  tens,
 ];
 
 const ImageGallery = () => {
@@ -111,13 +116,13 @@ const ImageGallery = () => {
               <source src={videoSrc} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
-            <button onClick={nextSlide} className="next-button">Next Video</button>
-            <div>place of videos</div>
+            {/* <button onClick={nextSlide} className="next-button">Next Video</button> */}
+            <div className="place-of-event">Kathas events </div>
           </div>
         ))}
       </div>
       <div className='text_subhaeding'>
-        We provide tent house services for the following products in and around Bangalore and across Karnataka.
+        We provide tent house services for the following products in and around Uttar-Pradesh and across India.
       </div>
       <table className='tabale-head'>
         <tbody>
