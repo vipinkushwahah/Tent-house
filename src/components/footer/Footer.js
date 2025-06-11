@@ -27,8 +27,8 @@ const Footer = () => {
             <br />
             <strong>
               <Link
-                // to="/quotationform"
-                onClick={() => window.open("quotationform", "_blank")}
+                to="/quotationform"
+                // onClick={() => window.open("quotationform", "_blank")}
                 style={{
                   cursor: "pointer",
                   display: "flex",
