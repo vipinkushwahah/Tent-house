@@ -28,6 +28,7 @@ const HeaderMain = () => {
     const generateBreadcrumb = () => {
         const pathSegments = location.pathname.split('/').filter(Boolean);
         return pathSegments.map((segment, index) => {
+            if (segment === 'quotationform') return null; // Skip this segment
             const path = `/${pathSegments.slice(0, index + 1).join('/')}`;
             const isLast = index === pathSegments.length - 1;
 
@@ -49,7 +50,7 @@ const HeaderMain = () => {
             <header className={`header ${darkMode ? 'header--dark' : ''}`}>
                 <div className="header__container">
                     <div className="header__logo">
-                        <a href="/home">
+                        <Link to="/">
                             <div>
                                 <img src={logo} alt="logo" className="header__logo-image" />
                             </div>
@@ -57,7 +58,7 @@ const HeaderMain = () => {
                                 <div>MAA BHAWANI</div>
                                 <div className="header__Sub-logo">TENT HOUSE</div>
                             </div>
-                        </a>
+                        </Link>
                     </div>
                     <nav className={`header__nav ${menuOpen ? 'header__nav--open' : ''}`}>
                         <ul className="header__menu">

@@ -9,6 +9,7 @@ import MainBody from './components/main-body/main';
 import Footer from './components/footer/Footer';
 import ImageGallery from './components/gellery/gellery';
 import WhatWeDo from './components/whatwedo/whatwedo';
+import QuotationForm from './components/QuotationForm/QuotationForm';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/whatwedo" element={<WhatWeDo />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/quotationform" element={<QuotationForm />} />
           <Route path="/gellery" element={<ImageGallery />} />
           {/* You can add a default route here as well */}
           {/* <Route path="/" element={<HeaderMain />} /> */}
