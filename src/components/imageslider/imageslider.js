@@ -133,11 +133,11 @@ export default function ImageSlider() {
         What We Do
       </div>
       <div className='headinghome-page-text'>
-        Shridhar Tent House is a trusted 36-year old Tent House Dealer and Tent House Supplier in Bangalore.
-        Shridhar Tent House supplies chairs, canopies, aluminium tents, shamianas, shamiyana tents, AC tents,
+        Maa Bhawani Tent House is a trusted 36-year old Tent House Dealer and Tent House Supplier in salempur.
+        Maa Bhawani Tent House supplies chairs, canopies, aluminium tents, shamianas, shamiyana tents, AC tents,
         German tents, Aluminium Hanger tents, pagoda tents, exhibition stalls, Octanorm exhibition stalls,
         super structures, mega hangers, wooden stages, pandals, and waterproof sheds for rent for functions,
-        exhibitions, events, conventions, and convention centers in and around Bangalore, Karnataka.
+        exhibitions, events, conventions, and convention centers in and around salempur, Utter Pradesh.
       </div>
       <div className='headinghome-page-subtext'>
         Tent House Supplier services provided by Maa Bhawani Tent House in Salempur.

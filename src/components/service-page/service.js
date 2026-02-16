@@ -102,7 +102,7 @@ const ServicesPage = () => {
           in Uttar-Pradesh. The company provides shamiyanas, German tents, aluminium hanger tents, pagoda tents, AC tents,
           canopies, wooden stages, super structures, mega hangers, exhibition stalls, Octanorm stalls for rent in Uttar-Pradesh for
           weddings, conventions, functions, tradeshows, conventions in and around Uttar-Pradesh.
-          Tent House Supplier services provided by Shridhar Tent House in Uttar-Pradesh.
+          Tent House Supplier services provided by Maa Bhawani Tent House in Uttar-Pradesh.
           We provide the following Tent House supplier services for Functions, Exhibitions, Tradeshows, Conferences,
           Events, Conventions, Convention Centers, Weddings, Engagement Functions, Felicitation Functions, Political Functions, Industrial Events, Corporate Functions, and more.
         </div>
