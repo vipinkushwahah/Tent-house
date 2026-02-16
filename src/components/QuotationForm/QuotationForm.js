@@ -73,18 +73,18 @@ export default function QuotationForm() {
     await new Promise(resolve => setTimeout(resolve, 300));
 
     const canvas = await html2canvas(pdfRef.current, {
-      scale: 2,
+      scale: 3,
       useCORS: true
     });
 
-    const imgData = canvas.toDataURL('image/png');
+    const imgData = canvas.toDataURL('image/jpeg', 1.0);
     const pdf = new jsPDF('p', 'pt', 'a4');
 
     const imgProps = pdf.getImageProperties(imgData);
     const pdfWidth = pdf.internal.pageSize.getWidth();
     const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
 
-    pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
+    pdf.addImage(imgData, 'jpeg', 0, 0, pdfWidth, pdfHeight);
     pdf.save('quotation.pdf');
 
     pdfRef.current.style.width = originalWidth;
