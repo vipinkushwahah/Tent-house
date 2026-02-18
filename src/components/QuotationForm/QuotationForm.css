@@ -56,11 +56,33 @@
   .quotation input {
     border: none;
     /* border-bottom: 1px solid #333; */
-    width: 100%;
+    width: 50%;
     padding: 2px 5px;
     font-size: 0.9rem;
     background: transparent;
+    transition: all 0.3s ease;
   }
+  
+  /* Hover Effect */
+  .quotation input:hover {
+    border-bottom: 1px solid #007bff;
+    background-color: rgba(0, 123, 255, 0.05);
+  }
+  
+  /* Focus Effect (Highly Recommended) */
+  .quotation input:focus {
+    outline: none;
+    border-bottom: 2px solid #007bff;
+    background-color: rgba(0, 123, 255, 0.08);
+  }
+  
+
+  .quotation input:focus {
+    outline: none;
+    border-bottom: 2px solid #007bff;
+    box-shadow: 0 4px 6px -6px #007bff;
+  }
+  
   
   .quotation__intro {
     margin-top: 1rem;

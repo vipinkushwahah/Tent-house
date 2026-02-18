@@ -21,7 +21,7 @@ const Footer = () => {
             <span className="underline">Contact</span> Us
           </h2>
           <p className="footer__text">
-            <strong>Email:</strong> maabhawanitenthouse5@gmail.com
+            <strong>Email:</strong> MaaBhawaniTentHouse5@gmail.com
             <br />
             <strong>Phone:</strong> +778-392-5991
             <br />
@@ -45,24 +45,14 @@ const Footer = () => {
             <span className="underline">Follow</span> us
           </h2>
           <div className="social-links">
-            <a href="https://www.instagram.com/vipinkushwaha39/" target="blank">
+            <a href="https://www.instagram.com/maabhawanitenthouse5/" target="blank">
               <div className="social-link">
                 <i className="ri-instagram-line"></i>
               </div>
             </a>
-            <a href="https://in.linkedin.com/in/vipinkushwahah" target="blank">
-              <div className="social-link">
-                <i className="ri-linkedin-fill"></i>
-              </div>
-            </a>
-            <a href="https://github.com/vipinkushwahah/" target="blank">
-              <div className="social-link">
-                <i className="ri-github-fill"></i>
-              </div>
-            </a>
             <div className="social-link">
               <i className="ri-whatsapp-fill"></i>
-              <span className="tooltip">7420-8683-46</span>
+              <span className="tooltip">+778-392-5991</span>
             </div>
           </div>
         </div>

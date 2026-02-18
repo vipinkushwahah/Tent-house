@@ -13,57 +13,85 @@ export default function QuotationForm() {
     address: '',
     estimateNo: '',
     date: '',
-    items: Array(14).fill({ name: '', qty: '', unit: '', price: '', amount: '' }),
+    items: Array.from({ length: 14 }, () => ({
+      name: '',
+      qty: '',
+      unit: '',
+      price: '',
+      amount: ''
+    })),
     notes: '',
     subtotal: '',
     gst: '',
     total: '',
     guarantor1: '',
     guarantor2: '',
-    signature: null, // base64
+    signature: null,
   });
 
+  /* ---------------- VALIDATION HELPERS ---------------- */
+
+  const allowOnlyText = (value) => /^[A-Za-z\s]*$/.test(value);
+  const allowOnlyPhone = (value) => /^[0-9]{0,10}$/.test(value);
+  const allowOnlyNumber = (value) => /^[0-9]*\.?[0-9]*$/.test(value);
+  const allowAlphaNumeric = (value) => /^[A-Za-z0-9-]*$/.test(value);
+
+  /* ---------------- AUTO CALCULATE ---------------- */
+
   useEffect(() => {
-    const updatedItems = form.items.map(item => {
+    const subtotal = form.items.reduce((sum, item) => {
       const qty = parseFloat(item.qty) || 0;
       const price = parseFloat(item.price) || 0;
-      const amount = qty * price;
-      return { ...item, amount: amount.toFixed(2) };
-    });
+      return sum + qty * price;
+    }, 0);
 
-    const subtotal = updatedItems.reduce((sum, item) => sum + parseFloat(item.amount || 0), 0);
     const gst = +(subtotal * 0.18).toFixed(2);
     const total = +(subtotal + gst).toFixed(2);
 
-    setForm(prevForm => ({
-      ...prevForm,
-      items: updatedItems,
+    setForm(prev => ({
+      ...prev,
       subtotal: subtotal.toFixed(2),
       gst: gst.toFixed(2),
       total: total.toFixed(2)
     }));
   }, [form.items]);
 
+  /* ---------------- UPDATE ITEM ---------------- */
+
   const updateItem = (index, field, value) => {
+    if (field === 'qty' || field === 'price') {
+      if (!allowOnlyNumber(value)) return;
+    }
+
     const updatedItems = [...form.items];
     updatedItems[index] = { ...updatedItems[index], [field]: value };
+
+    const qty = parseFloat(updatedItems[index].qty) || 0;
+    const price = parseFloat(updatedItems[index].price) || 0;
+    updatedItems[index].amount = (qty * price).toFixed(2);
+
     setForm({ ...form, items: updatedItems });
   };
 
+  /* ---------------- SIGNATURE ---------------- */
+
   const handleSignatureUpload = (e) => {
     const file = e.target.files[0];
+    if (!file) return;
+
     const reader = new FileReader();
     reader.onloadend = () => {
       setForm(prev => ({ ...prev, signature: reader.result }));
     };
-    if (file) {
-      reader.readAsDataURL(file);
-    }
+    reader.readAsDataURL(file);
   };
+
+  /* ---------------- DOWNLOAD PDF ---------------- */
 
   const handleDownload = async () => {
     const fileInput = document.querySelector('.file-upload');
-  if (fileInput) fileInput.classList.add('hide-in-pdf');
+    if (fileInput) fileInput.classList.add('hide-in-pdf');
+
     const originalWidth = pdfRef.current.style.width;
     const originalZoom = document.body.style.zoom;
 
@@ -95,9 +123,10 @@ export default function QuotationForm() {
   return (
     <div className="quotation">
       <div className="quotation__content" ref={pdfRef}>
+
         <header className="quotation__header">
           <div className="quotation__company-info">
-          <h2 className='quotation--price'>PRICE OFFER/QUOTATION</h2>
+            <h2 className='quotation--price'>PRICE OFFER/QUOTATION</h2>
             <h2>MAA BHAWANI TENT HOUSE</h2>
             <p>Nawalpur Chauraha, Salempur, Deoria</p>
             <p>Uttar Pradesh - 274509</p>
@@ -109,14 +138,63 @@ export default function QuotationForm() {
         </header>
 
         <section className="quotation__meta">
-          <div className="quotation__customer">
-            <p><strong>Customer Name:</strong> <input value={form.customerName} onChange={e => setForm({ ...form, customerName: e.target.value })} /></p>
-            <p><strong>Phone:</strong> <input value={form.phone} onChange={e => setForm({ ...form, phone: e.target.value })} /></p>
-            <p><strong>Address:</strong> <input value={form.address} onChange={e => setForm({ ...form, address: e.target.value })} /></p>
+          <div>
+            <p>
+              <strong>Customer Name:</strong>
+              <input
+                value={form.customerName}
+                onChange={e => {
+                  if (allowOnlyText(e.target.value))
+                    setForm({ ...form, customerName: e.target.value });
+                }}
+              />
+            </p>
+
+            <p>
+              <strong>Phone:</strong>
+              <input
+                value={form.phone}
+                maxLength={10}
+                onChange={e => {
+                  if (allowOnlyPhone(e.target.value))
+                    setForm({ ...form, phone: e.target.value });
+                }}
+              />
+            </p>
+
+            <p>
+              <strong>Address:</strong>
+              <input
+                value={form.address}
+                onChange={e =>
+                  setForm({ ...form, address: e.target.value })
+                }
+              />
+            </p>
           </div>
-          <div className="quotation__details">
-            <p><strong>Estimate No:</strong> <input value={form.estimateNo} onChange={e => setForm({ ...form, estimateNo: e.target.value })} /></p>
-            <p><strong>Date:</strong> <input value={form.date} onChange={e => setForm({ ...form, date: e.target.value })} /></p>
+
+          <div>
+            <p>
+              <strong>Estimate No:</strong>
+              <input
+                value={form.estimateNo}
+                onChange={e => {
+                  if (allowAlphaNumeric(e.target.value))
+                    setForm({ ...form, estimateNo: e.target.value });
+                }}
+              />
+            </p>
+
+            <p>
+              <strong>Date:</strong>
+              <input
+                type="date"
+                value={form.date}
+                onChange={e =>
+                  setForm({ ...form, date: e.target.value })
+                }
+              />
+            </p>
           </div>
         </section>
 
@@ -137,15 +215,51 @@ export default function QuotationForm() {
               <th>Amount</th>
             </tr>
           </thead>
+
           <tbody>
             {form.items.map((item, idx) => (
               <tr key={idx}>
                 <td>{idx + 1}</td>
-                <td><input value={item.name} onChange={e => updateItem(idx, 'name', e.target.value)} /></td>
-                <td><input value={item.qty} onChange={e => updateItem(idx, 'qty', e.target.value)} /></td>
-                <td><input value={item.unit} onChange={e => updateItem(idx, 'unit', e.target.value)} /></td>
-                <td><input value={item.price} onChange={e => updateItem(idx, 'price', e.target.value)} /></td>
-                <td><input value={item.amount} readOnly /></td>
+
+                <td>
+                  <input
+                    value={item.name}
+                    onChange={e =>
+                      updateItem(idx, 'name', e.target.value)
+                    }
+                  />
+                </td>
+
+                <td>
+                  <input
+                    value={item.qty}
+                    onChange={e =>
+                      updateItem(idx, 'qty', e.target.value)
+                    }
+                  />
+                </td>
+
+                <td>
+                  <input
+                    value={item.unit}
+                    onChange={e =>
+                      updateItem(idx, 'unit', e.target.value)
+                    }
+                  />
+                </td>
+
+                <td>
+                  <input
+                    value={item.price}
+                    onChange={e =>
+                      updateItem(idx, 'price', e.target.value)
+                    }
+                  />
+                </td>
+
+                <td>
+                  <input value={item.amount} readOnly />
+                </td>
               </tr>
             ))}
           </tbody>
@@ -178,24 +292,37 @@ export default function QuotationForm() {
 
         <div className="quotation__signatures">
           <div>
-            <label>Guarantor 1 Name:</label>
+            <label>Guarantor 1:</label>
             <input
               type="text"
               value={form.guarantor1}
-              onChange={e => setForm({ ...form, guarantor1: e.target.value })}
+              onChange={e => {
+                if (allowOnlyText(e.target.value))
+                  setForm({ ...form, guarantor1: e.target.value });
+              }}
             />
           </div>
+
           <div>
-            <label>Guarantor 2 Name:</label>
+            <label>Guarantor 2:</label>
             <input
               type="text"
               value={form.guarantor2}
-              onChange={e => setForm({ ...form, guarantor2: e.target.value })}
+              onChange={e => {
+                if (allowOnlyText(e.target.value))
+                  setForm({ ...form, guarantor2: e.target.value });
+              }}
             />
           </div>
+
           <div>
-            <label> Signature:</label>
-            <input type="file" accept="image/*" onChange={handleSignatureUpload} className="file-upload"/>
+            <label>Signature:</label>
+            <input
+              type="file"
+              accept="image/*"
+              onChange={handleSignatureUpload}
+              className="file-upload"
+            />
             {form.signature && (
               <img
                 src={form.signature}
